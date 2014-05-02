@@ -1,0 +1,256 @@
+/*
+ * Project: Html Generator
+ * Author: delvedor
+ * Site: http://projects.delved.org/htmlGenerator
+ * GitHub: https://github.com/delvedor
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+html, body {
+	width:100%;
+    height:100%;
+    margin:0 auto;
+    padding:0;
+    font-size: 14px;
+}
+
+/* General Rules */
+
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+/* Header */
+
+header {
+	width:100%;
+	text-align: center;
+	padding: 40px 0 40px 0;
+	margin:0 auto;
+}
+
+.bigTitle{
+	font-family:'Raleway', Helvetica, sans-serif;
+	font-size:3.5em;
+	color:#000000;
+}
+
+.smallTitle{
+	font-family:'Raleway', Helvetica, sans-serif;
+	font-size:0.9em;
+	color:#000000;
+}
+
+.description {
+	font-family:'Raleway', Helvetica, sans-serif;
+	font-size:1.1em;
+	color:#000000;
+	margin:0 auto;
+	margin-top:20px;
+	text-align: left;
+	width:60%;
+}
+
+
+/* Main */
+
+main {
+	width:60%;
+	border:1px #cccbcb solid;
+	margin:0 auto;
+	padding: 30px;
+}
+
+section {
+	padding-bottom: 30px;
+}
+
+.nameComponent {
+	display:inline;
+	font-family:'Lato', Arial, sans-serif;
+	font-size:1.6em;
+	color:#000000;
+}
+
+#file-name {
+	height:25px;
+	font-family:'Lato', Arial, sans-serif;
+	font-size:1em;
+	color:#484848;
+}
+
+#doctypeComponent, #metaComponent, #cssComponent, #jsComponent, #frameworkComponent {
+	display:inline;
+	font-family:'Lato', Arial, sans-serif;
+	font-size:1.4em;
+	color:#484848;
+}
+
+.addComponent {
+	font-family:'Lato', Arial, sans-serif;
+	font-size:1.4em;
+	color:#000000;
+	padding: 2px 2px 2px 2px;
+	background-color: rgba(204,204,204,0.63);
+	border:1px solid #cccbcb;
+	border-radius:28px;
+	padding:5px 10px;
+}
+
+.addComponent:hover {
+	background-color:#484848;
+	color:#ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+.listComponent {
+	font-family:'Lato', Arial, sans-serif;
+	font-size:1.4em;
+	color:#000000;
+	padding:5px;
+}
+
+.listComponent:hover {
+	cursor: pointer;
+}
+
+#downloadButton {
+	background-color:rgba(204,204,204,0.63);;
+	border-radius:28px;
+	border:1px solid #cccbcb;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:'Lato', Arial, sans-serif;
+	font-size:1.2em;
+	padding:6px 12px;
+}
+
+#downloadButton:hover {
+	background-color:#484848;
+	color:#ffffff;
+}
+
+#downloadButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* Main -> Modal Window */
+/* modal wrapper */
+.modal-outer{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	background: gray;
+	background: rgba(0, 0, 0, .5);
+}
+
+.modal-outer:target {
+	display: block;
+}
+
+/* modal inner */
+.modal {
+	width: 400px;
+	height: auto;
+	visibility: visible;
+	display: block;
+	z-index: 6000;
+	padding: 20px;
+	position: relative;
+	margin: 90px auto 40px;
+	overflow: visible;
+	background-color: white;
+	border: 1px solid #cccbcb;
+	
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	
+	-webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, .4),inset 0 1px 0 rgba(255, 255, 255, .5);
+	-moz-box-shadow: 0 4px 12px rgba(0, 0, 0, .4),inset 0 1px 0 rgba(255, 255, 255, .5);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, .4),inset 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+/* modal close button */
+.modal a[href="#close"] {
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: transparent;
+	font-size: 0px;
+}
+
+.modal a[href="#close"]:focus {
+	outline: none;
+}
+
+.modal a[href="#close"]:after {
+	content: 'X';
+	display: block;
+	position: absolute;
+	right: -16px;
+	top: -16px;
+	width: 20px;
+	height: 15px;
+	padding: 11px 7px 8px 7px;
+	text-decoration: none;
+	text-shadow: none;
+	text-align: center;
+	background: black;
+	color: white;
+	border: 3px solid white;
+	font-size: 12px;
+	font-weight: bold;
+	
+	-moz-border-radius: 20px;
+	border-radius: 40px;
+	
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.modal a[href="#close"]:focus:after {
+	outline: 1px solid #000;
+}
+
+/* Footer */
+
+footer {
+	width:60%;
+	border:1px #cccbcb solid;
+	margin:0 auto;
+	padding: 20px 30px;
+	margin-top:30px;
+}
+
+footer p {
+	font-family:'Lato', Arial, sans-serif;
+	font-size:0.9em;
+	color:#000000;
+	margin:1px;
+	text-align: left;
+}
+
+footer a {
+	color:#000000;
+	font-weight: bold;
+}

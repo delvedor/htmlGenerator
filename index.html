@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<!-- Meta -->
+    	<meta charset="utf-8"> 
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+
+<!-- Stylesheet -->
+        <link rel="stylesheet" href="css/reset.css" media="all"/>
+        <link rel="stylesheet" href="css/index.css" media="all"/>
+        
+<!-- Script -->
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="js/index.js"></script>
+                
+        <!--[if lt IE 9]>
+        <script>
+        	var elems = 'header main section footer'.split(' ');
+			for (var i = 0; i < elems.length; i++) {
+		    	document.createElement(elems[i]);
+			}
+		</script>
+		<![endif]-->
+        
+        <title>HTML Generator</title>
+    </head>
+    <body>
+    	<header>
+	        <h1 class="bigTitle disable-select">HTML Generator</h1>
+	        <h5 class="smallTitle disable-select">v. 0.6 Beta</h5>
+	        <p class="description disable-select">Are you bored of search, copy, paste every single time all the components of the &#60;head&#62; tag in HTML?<br/>
+				This is for you, click the "Add" button and select the component you need, write a file name and press "Download", and see the magic!<br/>
+				If you have advice or components you want to see here, please contact me!<br/>
+				This project is released Open Source on GitHub.
+			</p>
+    	</header>
+    	
+    	<main>
+    		<!-- FileName -->
+    		<section id="filename">
+    			<p class="nameComponent disable-select">Filename:</p>
+    			<input type="text" id="file-name" placeholder="File Name">
+    		</section>
+    	
+    		<!-- Doctype -->
+    		<section id="doctype">
+    			<p class="nameComponent disable-select">Doctype:</p>
+    			<a href="#modalDoctype"><p id="doctypeComponent"></p><p class="nameComponent addComponent">Add</p></a>
+				<div class ="modal-outer" id="modalDoctype">
+					<div class="modal">
+						<p id ="html5" class="listComponent disable-select">HTML 5</p>
+						<p id ="html401strict" class="listComponent disable-select">HTML 4.01 Strict</p>
+						<p id ="html401transitional" class="listComponent disable-select">HTML 4.01 Transitional</p>
+						<p id ="html401frameset" class="listComponent disable-select">HTML 4.01 Frameset</p>
+						<p id ="xhtml10strict" class="listComponent disable-select">XHTML 1.0 Strict</p>
+						<p id ="xhtml10transitional" class="listComponent disable-select">XHTML 1.0 Transitional</p>
+						<p id ="xhtml10frameset" class="listComponent disable-select">XHTML 1.0 Frameset</p>
+						<p id ="xhtml11" class="listComponent disable-select">XHTML 1.1</p>
+						<a href="#close" title="Close">Close</a>
+					</div>
+				</div>
+    		</section>
+    		
+    		<!-- Meta -->
+    		<section id="meta">
+    			<p class="nameComponent disable-select">Meta:</p>
+    			<a href="#modalMeta"><p id="metaComponent"></p><p class="nameComponent addComponent">Add</p></a>
+				<div class ="modal-outer" id="modalMeta">
+					<div class="modal">
+						<p id="charsetutf-8" class="listComponent disable-select">Charset UTF-8</p>
+						<p id="charsetiso-8859-1" class="listComponent disable-select">Charset ISO-8859-1</p>
+						<p id="viewport" class="listComponent disable-select">Viewport</p>
+						<a href="#close" title="Close">Close</a>
+					</div>
+				</div>
+    		</section>
+    		
+    		<!-- Stylesheet -->
+    		<section id="css">
+    			<p class="nameComponent disable-select">Stylesheet:</p>
+    			<a href="#modalCss"><p id="cssComponent"></p><p class="nameComponent addComponent">Add</p></a>
+				<div class ="modal-outer" id="modalCss">
+					<div class="modal">
+						<p id="reset" class="listComponent disable-select">Reset</p>
+						<a href="#close" title="Close">Close</a>
+					</div>
+				</div>
+    		</section>
+    		
+    		<!-- Script -->
+    		<section id="js">
+    			<p class="nameComponent disable-select">Script:</p>
+    			<a href="#modalScript"><p id="jsComponent"></p><p class="nameComponent addComponent">Add</p></a>
+				<div class ="modal-outer" id="modalScript">
+					<div class="modal">
+						<p id="jquery1110" class="listComponent disable-select">JQuery 1.11.0</p>
+						<p id="angular" class="listComponent disable-select">Angular</p>
+						<p id="modernizr" class="listComponent disable-select">Modernizr</p>
+						<p id="prototype" class="listComponent disable-select">Prototype</p>
+						<p id="scriptaculous" class="listComponent disable-select">Scriptaculous</p>
+						<a href="#close" title="Close">Close</a>
+					</div>
+				</div>
+    		</section>
+    		
+    		<!-- Framework -->
+    		<section id="framework">
+    			<p class="nameComponent disable-select">Framework:</p>
+    			<a href="#modalFramework"><p id="frameworkComponent"></p><p class="nameComponent addComponent">Add</p></a>
+				<div class ="modal-outer" id="modalFramework">
+					<div class="modal">
+						<p id="jqueryui1110" class="listComponent disable-select">JQuery UI 1.11.0</p>
+						<p id="bootstrap" class="listComponent disable-select">Bootstrap latest</p>
+						<a href="#close" title="Close">Close</a>
+					</div>
+				</div>
+    		</section>
+    		
+    		<!-- Download -->
+    		<section id="download">
+    			<form action="php/download.php" method="post">
+    				<input type="hidden" name="filenameInput" value=""/>
+    				<input type="hidden" name="doctypeInput" value=""/>
+    				<input type="hidden" name="metaInput" value=""/>
+    				<input type="hidden" name="cssInput" value=""/>
+    				<input type="hidden" name="jsInput" value=""/>
+    				<input type="hidden" name="frameworkInput" value=""/>
+    				<input type="submit" value="Download" id="downloadButton" />
+    			</form>
+    		</section>
+    	</main>
+       	<footer>
+       		<p>Site powered by delvedor.</p>
+       		<p>This project is Open Source, you can find the code on <a href="">GitHub</a>!</p>
+       		<p>Follow me on <a href="https://www.facebook.com/tomas.dellavedova.902">Facebook</a>, <a href="https://twitter.com/delvedor">Twitter</a>, <a href="https://github.com/delvedor">Github</a>.</p>
+       		<p>If you have trouble please contact me ( <span onclick="this.textContent = ('tomas' + '@delved' + String.fromCharCode(46) + 'org'); this.onclick = null; this.style.cursor='default'" style="cursor: pointer">Click here</span> ).</p>
+    	</footer>
+    </body>
+</html>
