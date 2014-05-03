@@ -1,10 +1,3 @@
-/*
- * Project: Html Generator
- * Author: delvedor
- * Site: http://projects.delved.org/htmlGenerator
- * GitHub: https://github.com/delvedor
- */
-
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 @import url(http://fonts.googleapis.com/css?family=Lato);
 
@@ -84,7 +77,7 @@ section {
 	color:#484848;
 }
 
-#doctypeComponent, #metaComponent, #cssComponent, #jsComponent, #frameworkComponent {
+#doctypeComponent, #metaComponent, #cssComponent, #jsComponent, #frameworkComponent, #filenameComponent {
 	display:inline;
 	font-family:'Lato', Arial, sans-serif;
 	font-size:1.4em;
@@ -175,17 +168,8 @@ a {
 	overflow: visible;
 	background-color: white;
 	border: 1px solid #cccbcb;
-	
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
 	background-clip: padding-box;
-	
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
 	border-radius: 6px;
-	
-	-webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, .4),inset 0 1px 0 rgba(255, 255, 255, .5);
-	-moz-box-shadow: 0 4px 12px rgba(0, 0, 0, .4),inset 0 1px 0 rgba(255, 255, 255, .5);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, .4),inset 0 1px 0 rgba(255, 255, 255, .5);
 }
 
@@ -219,12 +203,7 @@ a {
 	border: 3px solid white;
 	font-size: 12px;
 	font-weight: bold;
-	
-	-moz-border-radius: 20px;
 	border-radius: 40px;
-	
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
